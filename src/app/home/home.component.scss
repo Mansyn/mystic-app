@@ -1,0 +1,90 @@
+@use "@angular/material" as mat;
+
+$mystic-app-primary: mat.define-palette(mat.$amber-palette);
+$mystic-app-accent: mat.define-palette(mat.$grey-palette, A200, A100, A400);
+
+.hero {
+  overflow: hidden;
+  position: relative;
+  background-image: url("/assets/symbols_bg-min.jpg");
+  background-repeat: repeat;
+}
+
+.title {
+  h1 {
+    font-family: "Shadows Into Light", cursive !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 10px mat.get-color-from-palette($mystic-app-accent),
+      1px 1px 10px mat.get-color-from-palette($mystic-app-accent);
+  }
+}
+
+.info {
+  display: flex;
+  place-content: center space-between;
+  align-items: center;
+  padding: 3em 0 5em 0;
+  background-color: mat.get-color-from-palette($mystic-app-accent);
+  .meet {
+    padding: 3em 6em;
+    h2 {
+      margin-bottom: 1em;
+      font-size: 4vw;
+      font-family: "Shadows Into Light", cursive !important;
+      font-weight: bold !important;
+      text-shadow: 1px 1px 10px mat.get-color-from-palette($mystic-app-primary);
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .hero {
+    max-height: 150px;
+  }
+  .title {
+    height: 150px;
+    h1 {
+      font-size: 10vw;
+    }
+  }
+  .info {
+    flex-direction: column;
+    .meet h2 {
+      text-align: center;
+      font-size: 8vw;
+    }
+    .diane {
+      padding: 0 6em;
+      img {
+        border-radius: 35px;
+        max-width: 100%;
+        border: 1px solid mat.get-color-from-palette($mystic-app-accent);
+        padding: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .hero {
+    max-height: 250px;
+  }
+  .title {
+    height: 250px;
+    h1 {
+      font-size: 8vw;
+    }
+  }
+  .info {
+    flex-direction: row;
+    .meet h2 {
+      font-size: 6vw;
+    }
+    .diane > img {
+      border-radius: 35px 0 0 35px;
+      max-width: 35vw;
+      border: 1px solid mat.get-color-from-palette($mystic-app-accent);
+      padding: 1em 0 1em 1em;
+    }
+  }
+}

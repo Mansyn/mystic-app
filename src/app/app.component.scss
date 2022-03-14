@@ -1,0 +1,28 @@
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .mat-toolbar-row .mat-icon-button {
+    display: block;
+  }
+  .top-menu {
+    display: none;
+  }
+  .flex-small {
+    flex: 1 1 auto;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .mat-toolbar-row .mat-icon-button {
+    display: none;
+  }
+  .top-menu {
+    display: block;
+  }
+  .flex-small {
+    display: none;
+  }
+}
+
+.menu-spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,65 @@
+@use "@angular/material" as mat;
+
+$mystic-app-primary: mat.define-palette(mat.$amber-palette);
+$mystic-app-accent: mat.define-palette(mat.$grey-palette, A200, A100, A400);
+
+.hero {
+  overflow: hidden;
+  position: relative;
+  background-image: url("/assets/sky.jpg");
+  background-repeat: repeat;
+}
+
+.title {
+  h1 {
+    font-size: 7vw;
+    font-family: "Shadows Into Light", cursive !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 10px mat.get-color-from-palette($mystic-app-accent),
+      1px 1px 10px mat.get-color-from-palette($mystic-app-accent);
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .hero {
+    max-height: 150px;
+  }
+  .title {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .hero {
+    max-height: 250px;
+  }
+  .title {
+    height: 250px;
+  }
+}
+
+.info {
+  display: flex;
+  place-content: center center;
+  align-items: center;
+  padding: 3em 0 5em 0;
+  background-color: mat.get-color-from-palette($mystic-app-accent);
+  .meet {
+    padding: 3em 8em;
+    max-width: 120vh;
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 4vw;
+      font-family: "Shadows Into Light", cursive !important;
+      font-weight: bold !important;
+      text-shadow: 1px 1px 10px mat.get-color-from-palette($mystic-app-primary),
+        1px 1px 10px mat.get-color-from-palette($mystic-app-primary);
+    }
+  }
+  .meet > div {
+    margin-bottom: 2em;
+  }
+  .mat-card {
+  }
+}
